@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Clicker - M.Fun</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Button Clicker</h1>
+    </header>
+    <main>
+        <button id="clickButton">Click me!</button>
+        <p>Clicks: <span id="clickCount">0</span></p>
+        <button onclick="window.location.href='index.html'">Back to Menu</button>
+    </main>
+    <script>
+        let clickCount = 0;
+        const clickButton = document.getElementById('clickButton');
+        const clickCountDisplay = document.getElementById('clickCount');
+
+        clickButton.addEventListener('click', () => {
+            clickCount++;
+            clickCountDisplay.textContent = clickCount;
+        });
+    </script>
+</body>
+</html>
